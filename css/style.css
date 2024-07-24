@@ -91,6 +91,7 @@ header a {
   max-width: 100%;
   height: auto;
   color: #fff;
+  filter: brightness(0) invert(1); /* Esto hará que el icono sea blanco */
 }
 
 /* Form section */
@@ -205,10 +206,12 @@ button[type="submit"]:hover {
 .reason h3 {
   color: #fff;
   padding-right: 40px;
+  font-size: 40px;
 }
 
 .reason p {
   padding-right: 40px;
+  font-size: 30px;
 }
 
 .reason::after {
