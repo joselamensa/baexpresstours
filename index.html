@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BA Express Tours - Su anfitrión en Buenos Aires</title>
+    <link rel="shortcut icon" href="./imagenes/logos/icono.jpg" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="./html/citytour.html">City Tour</a></li>
+          <li><a href="./html/experiencias.html">Experiencias</a></li>
+          <li><a href="#seccionuno"><img src="./imagenes/iconos/casa.png"alt=""class="iconocasablanca"/></a></li>
+          <li><a href="./html/flota.html">Vehículos</a></li>
+          <li><a href="./html/contacto.html">Contáctanos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="logo-section" id="seccionuno">
+        <div class="logo-content">
+          <img
+            src="./imagenes/logos/Logo.svg"
+            alt="BA Express Tours Logo"
+            class="logo"
+          />
+          <h1>BA EXPRESS TOURS</h1>
+          <h2>Su anfitrión en Buenos Aires.</h2>
+          <p>Traslados-Turismo-Experiencias.</p>
+          <div class="language-selector">
+            <select id="language">
+              <option value="es">Español</option>
+              <option value="en">English</option>
+              <option value="pt">Português</option>
+              <option value="it">Italiano</option>
+            </select>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section class="form-section">
+        <div class="container">
+        <h2>Precarga de datos para:</h2>
+        <h3>Traslados aeropuertarios. Arribos y partidas.</h3>
+        <form id="traslados-form" action="procesar_formulario.php" method="POST">
+            <div class="form-group">
+                <h4>Datos del viaje</h4>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="origen">Origen:</label>
+                <input type="text" id="origen" name="origen" required>
+
+                <label for="destino">Destino:</label>
+                <input type="text" id="destino" name="destino" required>
+
+                <label for="pasajeros">Pasajeros:</label>
+                <input type="number" id="pasajeros" name="pasajeros" required>
+
+                <label for="equipaje">Equipaje:</label>
+                <input type="number" id="equipaje" name="equipaje" required>
+            </div>
+
+            <div class="form-group">
+                <h4>Contacto</h4>
+                <label for="nombre">Nombre y apellido:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="celular">Celular:</label>
+                <input type="tel" id="celular" name="celular" required>
+
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="idioma">Idioma:</label>
+                <select id="idioma" name="idioma" required>
+                    <option value="espanol">Español</option>
+                    <option value="ingles">Inglés</option>
+                    <option value="portugues">Portugués</option>
+                    <option value="italiano">Italiano</option>
+                </select>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    </section>
+    <section class="about-section">
+        <div class="container">
+        <div class="service-cards">
+        <div class="service-card">
+            <img src="./imagenes/iconos/Transfers.svg" alt="">
+            <h3>Transfers</h3>
+        </div>
+        <div class="service-card">
+            <img src="./imagenes/iconos/City Tour.svg" alt="">
+            <h3>City Tour</h3>
+            <!-- Añadir contenido relevante -->
+        </div>
+        <div class="service-card">
+            <img src="./imagenes/iconos/Experiencias.svg" alt="">
+            <h3>Experiencias</h3>
+            <!-- Añadir contenido relevante -->
+        </div>
+        </div>
+        <h2>Traslados - Turismo - Experiencias</h2>
+        <p><b>Somos una empresa familiar dirigida por profesionales Licenciados en Turismo, con gran experiencia e idoneidad en el rubro.</b></p>
+        <p>Cada servicio es brindado con dedicación y calidad desde el primer contacto con nuestros clientes.</p>
+        <p>Nos capacitamos para poder satisfacer las necesidades que cada uno requiera dando un servicio premium y personalizado.</p>
+
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="reasons">
+            <div class="reason">
+                <h3>Seguridad y Confort:</h3>
+                <p>Ofrecemos un servicio de transporte que prioriza la seguridad y el confort de nuestros clientes en todo momento. Nuestros vehículos están equipados con las últimas medidas de seguridad y son mantenidos regularmente para garantizar viajes sin contratiempos.</p>
+            </div>
+            <div class="reason">
+                <h3>Monitoreo de Vuelos:</h3>
+                <p>En BA EXPRESS nos comprometemos a rastrear cada vuelo de nuestros clientes en tiempo real. Esto significa que estamos siempre informados sobre cualquier cambio en horarios o retrasos, asegurando que estaremos esperándolos en su regreso.</p>
+            </div>
+            <div class="reason">
+                <h3>Choferes y Guías Profesionales:</h3>
+                <p>Nuestro equipo está compuesto por profesionales altamente capacitados, que no solo cuentan con experiencia en conducción segura, sino que también dominan varios idiomas como inglés, español, portugués e italiano. Esto nos permite comunicarnos de manera eficiente y cordial, adaptándonos a sus necesidades lingüísticas y culturales.</p>
+            </div>
+        </div>
+        <h3>Consultas:</h3>
+        <p>Email: <a href="mailto:baexpresstours@gmail.com">baexpresstours@gmail.com</a></p>
+        <p>Teléfono: 1144058237 / 1136709734</p>
+        </div>
+    </section>
+    </main>
+
+
+    <script src="./javascript/script.js"></script>
+  </body>
+</html>

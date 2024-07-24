@@ -1,0 +1,237 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background: #003366;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+.iconocasablanca {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  filter: brightness(0) invert(1); /* Esto hará que el icono sea blanco */
+}
+@media (max-width: 768px) {
+  .iconocasablanca {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+header nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+/* Logo section */
+.logo-section {
+  background-image: linear-gradient(
+      rgba(0, 51, 102, 0.7),
+      rgba(0, 51, 102, 0.7)
+    ),
+    url("../imagenes/imgs/IMG_8903.JPG");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-content {
+  padding: 2rem;
+  max-width: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  color: #fff;
+}
+
+/* Form section */
+.form-section {
+  background-image: url("../imagenes/imgs/Fondo\ 1.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.form-section form {
+  background: #fff;
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #003366;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #003d82;
+}
+
+/* About section */
+.about-section {
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Arial", sans-serif;
+  background-image: url("../imagenes/imgs/Fondo\ 2.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.service-card {
+  background-color: white;
+  width: 250px;
+  height: auto;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+  width: 80px;
+  height: 80px;
+  margin-top: 30px;
+}
+
+.service-card h3 {
+  color: #333;
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+.reasons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.reason {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.reason h3 {
+  color: #fff;
+  padding-right: 40px;
+}
+
+.reason p {
+  padding-right: 40px;
+}
+
+.reason::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.reason:nth-child(1)::after {
+  background-image: url("../imagenes/iconos/Seguridad.svg");
+}
+
+.reason:nth-child(2)::after {
+  background-image: url("../imagenes/iconos/monitoreo.svg");
+}
+
+.reason:nth-child(3)::after {
+  background-image: url("../imagenes/iconos/Credencial.svg");
+}
