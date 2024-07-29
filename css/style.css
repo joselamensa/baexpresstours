@@ -192,6 +192,16 @@ button[type="submit"]:hover {
   margin-top: 20px;
   font-size: 1.2em;
 }
+.sobrenosotros h2 {
+  color: #fff;
+  padding-right: 40px;
+  font-size: 40px;
+}
+.sobrenosotros p {
+  color: #fff;
+  padding-right: 40px;
+  font-size: 20px;
+}
 .reasons {
   display: flex;
   flex-wrap: wrap;
@@ -220,11 +230,11 @@ button[type="submit"]:hover {
 .reason::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 60%;
   right: 15px;
   transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -240,4 +250,46 @@ button[type="submit"]:hover {
 
 .reason:nth-child(3)::after {
   background-image: url("../imagenes/iconos/Credencial.svg");
+}
+
+h3.consultas {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.8em;
+  text-decoration: underline;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  margin: 0 10px;
+  font-size: 1.5em;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #3498db;
 }
