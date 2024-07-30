@@ -304,13 +304,20 @@ h3.consultas {
   background-position: center;
   color: #fff;
 }
-
+.camionetah1 {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
 #intro,
 #description {
   text-align: center;
   margin-bottom: 30px;
+  padding-right: 40px;
+  font-size: 20px;
 }
-
 #attractions {
   display: flex;
   flex-direction: column;
