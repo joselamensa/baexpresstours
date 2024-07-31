@@ -26,19 +26,14 @@ header {
   padding: 1rem 0;
   text-align: center;
 }
+
 .iconocasablanca {
   width: 20px;
   height: 20px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 5px;
-  filter: brightness(0) invert(1); /* Esto hará que el icono sea blanco */
-}
-@media (max-width: 768px) {
-  .iconocasablanca {
-    width: 16px;
-    height: 16px;
-  }
+  filter: brightness(0) invert(1);
 }
 
 header nav ul {
@@ -85,6 +80,7 @@ header a {
   flex-direction: column;
   align-items: center;
 }
+
 .logo-content h1 {
   font-size: 50px;
 }
@@ -94,7 +90,7 @@ header a {
   max-width: 100%;
   height: auto;
   color: #fff;
-  filter: brightness(0) invert(1); /* Esto hará que el icono sea blanco */
+  filter: brightness(0) invert(1);
 }
 
 /* Form section */
@@ -103,6 +99,7 @@ header a {
   background-size: cover;
   background-position: center;
   color: white;
+  padding: 20px 0;
 }
 
 .form-section form {
@@ -158,8 +155,10 @@ button[type="submit"]:hover {
   background-position: center;
   color: #fff;
 }
+
 .service-cards {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   margin-bottom: 40px;
@@ -168,12 +167,14 @@ button[type="submit"]:hover {
 .service-card {
   background-color: white;
   width: 250px;
+  max-width: 100%;
   height: auto;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .service-card:hover {
@@ -192,16 +193,19 @@ button[type="submit"]:hover {
   margin-top: 20px;
   font-size: 1.2em;
 }
+
 .sobrenosotros h2 {
   color: #fff;
   padding-right: 40px;
   font-size: 40px;
 }
+
 .sobrenosotros p {
   color: #fff;
   padding-right: 40px;
   font-size: 20px;
 }
+
 .reasons {
   display: flex;
   flex-wrap: wrap;
@@ -304,6 +308,7 @@ h3.consultas {
   background-position: center;
   color: #fff;
 }
+
 .camionetah1 {
   width: 100%;
   height: auto;
@@ -311,6 +316,7 @@ h3.consultas {
   max-width: 100%;
   object-fit: cover;
 }
+
 #intro,
 #description {
   text-align: center;
@@ -318,6 +324,7 @@ h3.consultas {
   padding-right: 40px;
   font-size: 20px;
 }
+
 #attractions {
   display: flex;
   flex-direction: column;
@@ -344,36 +351,22 @@ h3.consultas {
   margin-top: 0;
 }
 
-@media (max-width: 768px) {
-  .card {
-    flex-direction: column;
-  }
-
-  .card img {
-    width: 100%;
-    height: 200px;
-  }
-
-  .card-content {
-    width: 100%;
-  }
-}
-
 /*EXPERIENCIAS */
-
 .experiencias {
   margin: 0 auto;
   padding: 0px;
-  height: 94vh;
+  min-height: 94vh;
   font-family: "Arial", sans-serif;
   background-image: url("../imagenes/imgs/Fondo\ 1.png");
   background-size: cover;
   background-position: center;
   color: #fff;
 }
+
 .exper {
   color: black;
 }
+
 .actexp {
   color: #003392;
 }
@@ -385,6 +378,7 @@ h3.consultas {
   background-size: cover;
   background-position: center;
   color: #fff;
+  padding: 20px 0;
 }
 
 .vehiculos {
@@ -465,8 +459,67 @@ h3.consultas {
   text-align: center;
 }
 
+/* Media Queries para responsividad */
 @media (max-width: 768px) {
+  .iconocasablanca {
+    width: 16px;
+    height: 16px;
+  }
+
+  .logo-content h1 {
+    font-size: 30px;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+
+  .sobrenosotros h2,
+  .reason h3 {
+    font-size: 30px;
+  }
+
+  .sobrenosotros p,
+  .reason p {
+    font-size: 16px;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .card-content {
+    width: 100%;
+  }
+
   .vehiculos-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  header a {
+    font-size: 14px;
+  }
+
+  .logo-content h1 {
+    font-size: 24px;
+  }
+
+  .sobrenosotros h2,
+  .reason h3 {
+    font-size: 24px;
+  }
+
+  .sobrenosotros p,
+  .reason p,
+  #intro,
+  #description {
+    font-size: 14px;
   }
 }
