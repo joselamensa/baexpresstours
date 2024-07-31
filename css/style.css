@@ -358,3 +358,115 @@ h3.consultas {
     width: 100%;
   }
 }
+
+/*EXPERIENCIAS */
+
+.experiencias {
+  margin: 0 auto;
+  padding: 0px;
+  height: 94vh;
+  font-family: "Arial", sans-serif;
+  background-image: url("../imagenes/imgs/Fondo\ 1.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.exper {
+  color: black;
+}
+.actexp {
+  color: #003392;
+}
+
+/* FLOTA VEHICULOS */
+.flota {
+  font-family: "Arial", sans-serif;
+  background-image: url("../imagenes/imgs/Fondo\ 1.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.vehiculos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.vehiculos h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.vehiculos > p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.vehiculos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.vehiculo-card {
+  background-color: #f9f9f9;
+  color: black;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.vehiculo-card:hover {
+  transform: translateY(-5px);
+}
+
+.vehiculo-card h3 {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.vehiculo-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.vehiculo-card .modelo {
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.vehiculo-card .detalles {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #ecf0f1;
+}
+
+.vehiculo-card .detalles span {
+  display: flex;
+  align-items: center;
+}
+
+.vehiculo-card .detalles i {
+  margin-right: 5px;
+}
+
+.nota-equipaje {
+  color: grey;
+  margin-top: 30px;
+  font-style: italic;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .vehiculos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}

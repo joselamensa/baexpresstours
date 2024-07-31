@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contáctanos - BA Express Tours</title>
+    <title>City Tour - BA Express Tours</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="../imagenes/logos/icono.jpg" />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
@@ -20,43 +25,76 @@
     </header>
 
     <main>
-      <h2>Contáctanos</h2>
-      <p>Comunicate con nosotros a través de estos medios:</p>
-      <ul>
-        <li>
-          Email:
-          <a href="mailto:baexpresstours@gmail.com">baexpresstours@gmail.com</a>
-        </li>
-        <li>Teléfono: 1144058237</li>
-        <li>WhatsApp: 1136709734</li>
-      </ul>
+      <section class="form-section">
+        <div class="container">
+          <h2>Precarga de datos para:</h2>
+          <h3>Traslados aeroportuarios. Arribos y partidas.</h3>
+          <form id="traslados-form" action="../formulario.php" method="POST">
+            <div class="form-group">
+              <h4>Datos del viaje</h4>
+              <label for="fecha">Fecha:</label>
+              <input type="date" id="fecha" name="fecha" required />
 
-      <h3>Formulario de contacto</h3>
-      <form id="contact-form" action="procesar_contacto.php" method="POST">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required /><br />
+              <label for="origen">Origen:</label>
+              <input type="text" id="origen" name="origen" required />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required /><br />
+              <label for="destino">Destino:</label>
+              <input type="text" id="destino" name="destino" required />
 
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" /><br />
+              <label for="pasajeros">Pasajeros:</label>
+              <input type="number" id="pasajeros" name="pasajeros" required />
 
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" required></textarea><br />
+              <label for="equipaje">Equipaje:</label>
+              <input type="number" id="equipaje" name="equipaje" required />
+            </div>
 
-        <button type="submit">Enviar</button>
-      </form>
+            <div class="form-group">
+              <h4>Contacto</h4>
+              <label for="nombre">Nombre y apellido:</label>
+              <input type="text" id="nombre" name="nombre" required />
+
+              <label for="celular">Celular:</label>
+              <input type="tel" id="celular" name="celular" required />
+
+              <label for="email">E-Mail:</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="idioma">Idioma:</label>
+              <select id="idioma" name="idioma" required>
+                <option value="espanol">Español</option>
+                <option value="ingles">Inglés</option>
+                <option value="portugues">Portugués</option>
+                <option value="italiano">Italiano</option>
+              </select>
+            </div>
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+        <h3 class="consultas">Consultas</h3>
+        <div class="contact-info">
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a
+              href="mailto:baexpresstours@gmail.com"
+              style="text-decoration: none; color: white"
+              >baexpresstours@gmail.com</a
+            >
+          </p>
+          <p><i class="fas fa-phone"></i> 1144058237 / 1136709734</p>
+          <div class="social-icons">
+            <a
+              href="https://www.instagram.com/baexpresstours/"
+              class="social-icon"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://wa.me/1136709734" class="social-icon"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </section>
     </main>
-
-    <footer>
-      <h3>Consultas:</h3>
-      <p>
-        Email:
-        <a href="mailto:baexpresstours@gmail.com">baexpresstours@gmail.com</a>
-      </p>
-      <p>Teléfono: 1144058237 / 1136709734</p>
-    </footer>
 
     <script src="script.js"></script>
   </body>
