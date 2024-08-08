@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>City Tour - BA Express Tours</title>
+    <title
+      data-es="Precarga de datos para:"
+      data-en="Data Entry for:"
+      data-pt="Pré-carregamento de dados para:"
+      data-it="Pre-caricamento dei dati per:"
+    >
+      Precarga de datos para:
+    </title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -15,11 +22,56 @@
     <header>
       <nav>
         <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="./citytour.html">City Tour</a></li>
-          <li><a href="./flota.html">Vehículos</a></li>
-          <li><a href="./experiencias.html">Experiencias</a></li>
-          <li><a href="./contacto.html">Contáctanos</a></li>
+          <li>
+            <a
+              href="../index.html"
+              data-es="Inicio"
+              data-en="Home"
+              data-pt="Início"
+              data-it="Home"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href="./citytour.html"
+              data-es="City Tour"
+              data-en="City Tour"
+              data-pt="City Tour"
+              data-it="City Tour"
+              >City Tour</a
+            >
+          </li>
+          <li>
+            <a
+              href="./flota.html"
+              data-es="Vehículos"
+              data-en="Vehicles"
+              data-pt="Veículos"
+              data-it="Veicoli"
+              >Vehículos</a
+            >
+          </li>
+          <li>
+            <a
+              href="./experiencias.html"
+              data-es="Experiencias"
+              data-en="Experiences"
+              data-pt="Experiências"
+              data-it="Esperienze"
+              >Experiencias</a
+            >
+          </li>
+          <li>
+            <a
+              href="./contacto.html"
+              data-es="Contáctanos"
+              data-en="Contact Us"
+              data-pt="Contate-Nos"
+              data-it="Contattaci"
+              >Contáctanos</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -27,51 +79,190 @@
     <main>
       <section class="form-section">
         <div class="container">
-          <h2>Precarga de datos para:</h2>
-          <h3>Traslados aeroportuarios. Arribos y partidas.</h3>
+          <h2
+            data-es="Precarga de datos para:"
+            data-en="Data Entry for:"
+            data-pt="Pré-carregamento de dados para:"
+            data-it="Pre-caricamento dei dati per:"
+          >
+            Precarga de datos para:
+          </h2>
+          <h3
+            data-es="Traslados aeroportuarios. Arribos y partidas."
+            data-en="Airport Transfers. Arrivals and Departures."
+            data-pt="Transfers de aeroporto. Chegadas e partidas."
+            data-it="Trasferimenti aeroportuali. Arrivi e partenze."
+          >
+            Traslados aeroportuarios. Arribos y partidas.
+          </h3>
           <form id="traslados-form" action="../formulario.php" method="POST">
             <div class="form-group">
-              <h4>Datos del viaje</h4>
-              <label for="fecha">Fecha:</label>
+              <h4
+                data-es="Datos del viaje"
+                data-en="Travel Information"
+                data-pt="Dados da viagem"
+                data-it="Dettagli del viaggio"
+              >
+                Datos del viaje
+              </h4>
+              <label
+                for="fecha"
+                data-es="Fecha:"
+                data-en="Date:"
+                data-pt="Data:"
+                data-it="Data:"
+                >Fecha:</label
+              >
               <input type="date" id="fecha" name="fecha" required />
 
-              <label for="origen">Origen:</label>
+              <label
+                for="origen"
+                data-es="Origen:"
+                data-en="Origin:"
+                data-pt="Origem:"
+                data-it="Origine:"
+                >Origen:</label
+              >
               <input type="text" id="origen" name="origen" required />
 
-              <label for="destino">Destino:</label>
+              <label
+                for="destino"
+                data-es="Destino:"
+                data-en="Destination:"
+                data-pt="Destino:"
+                data-it="Destinazione:"
+                >Destino:</label
+              >
               <input type="text" id="destino" name="destino" required />
 
-              <label for="pasajeros">Pasajeros:</label>
+              <label
+                for="pasajeros"
+                data-es="Pasajeros:"
+                data-en="Passengers:"
+                data-pt="Passageiros:"
+                data-it="Passeggeri:"
+                >Pasajeros:</label
+              >
               <input type="number" id="pasajeros" name="pasajeros" required />
 
-              <label for="equipaje">Equipaje:</label>
+              <label
+                for="equipaje"
+                data-es="Equipaje:"
+                data-en="Luggage:"
+                data-pt="Bagagem:"
+                data-it="Bagaglio:"
+                >Equipaje:</label
+              >
               <input type="number" id="equipaje" name="equipaje" required />
             </div>
 
             <div class="form-group">
-              <h4>Contacto</h4>
-              <label for="nombre">Nombre y apellido:</label>
+              <h4
+                data-es="Contacto"
+                data-en="Contact"
+                data-pt="Contato"
+                data-it="Contatto"
+              >
+                Contacto
+              </h4>
+              <label
+                for="nombre"
+                data-es="Nombre y apellido:"
+                data-en="Full Name:"
+                data-pt="Nome e sobrenome:"
+                data-it="Nome e cognome:"
+                >Nombre y apellido:</label
+              >
               <input type="text" id="nombre" name="nombre" required />
 
-              <label for="celular">Celular:</label>
+              <label
+                for="celular"
+                data-es="Celular:"
+                data-en="Phone:"
+                data-pt="Celular:"
+                data-it="Telefono:"
+                >Celular:</label
+              >
               <input type="tel" id="celular" name="celular" required />
 
-              <label for="email">E-Mail:</label>
+              <label
+                for="email"
+                data-es="E-Mail:"
+                data-en="Email:"
+                data-pt="E-Mail:"
+                data-it="E-Mail:"
+                >E-Mail:</label
+              >
               <input type="email" id="email" name="email" required />
 
-              <label for="idioma">Idioma:</label>
+              <label
+                for="idioma"
+                data-es="Idioma:"
+                data-en="Language:"
+                data-pt="Idioma:"
+                data-it="Lingua:"
+                >Idioma:</label
+              >
               <select id="idioma" name="idioma" required>
-                <option value="espanol">Español</option>
-                <option value="ingles">Inglés</option>
-                <option value="portugues">Portugués</option>
-                <option value="italiano">Italiano</option>
+                <option
+                  value="espanol"
+                  data-es="Español"
+                  data-en="Spanish"
+                  data-pt="Espanhol"
+                  data-it="Spagnolo"
+                >
+                  Español
+                </option>
+                <option
+                  value="ingles"
+                  data-es="Inglés"
+                  data-en="English"
+                  data-pt="Inglês"
+                  data-it="Inglese"
+                >
+                  Inglés
+                </option>
+                <option
+                  value="portugues"
+                  data-es="Portugués"
+                  data-en="Portuguese"
+                  data-pt="Português"
+                  data-it="Portoghese"
+                >
+                  Portugués
+                </option>
+                <option
+                  value="italiano"
+                  data-es="Italiano"
+                  data-en="Italian"
+                  data-pt="Italiano"
+                  data-it="Italiano"
+                >
+                  Italiano
+                </option>
               </select>
             </div>
 
-            <button type="submit">Enviar</button>
+            <button
+              type="submit"
+              data-es="Enviar"
+              data-en="Submit"
+              data-pt="Enviar"
+              data-it="Invia"
+            >
+              Enviar
+            </button>
           </form>
         </div>
-        <h3 class="consultas">Consultas</h3>
+        <h3
+          class="consultas"
+          data-es="Consultas"
+          data-en="Inquiries"
+          data-pt="Consultas"
+          data-it="Richieste"
+        >
+          Consultas
+        </h3>
         <div class="contact-info">
           <p>
             <i class="fas fa-envelope"></i>
@@ -96,6 +287,6 @@
       </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="../javascript/script.js"></script>
   </body>
 </html>
