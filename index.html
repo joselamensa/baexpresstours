@@ -12,12 +12,12 @@
     <header>
       <nav>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="./html/citytour.html">City Tour</a></li>
-          <li><a href="./html/experiencias.html">Experiencias</a></li>
-          <li><a href="#seccionuno"><img src="./imagenes/iconos/casa.png"alt=""class="iconocasablanca"/></a></li>
-          <li><a href="./html/flota.html">Vehículos</a></li>
-          <li><a href="./html/contacto.html">Contáctanos</a></li>
+          <li><a href="index.html" data-es="Inicio" data-en="Home" data-pt="Início" data-it="Inizio">Inicio</a></li>
+          <li><a href="./html/citytour.html" data-es="City Tour" data-en="City Tour" data-pt="City Tour" data-it="City Tour">City Tour</a></li>
+          <li><a href="./html/experiencias.html" data-es="Experiencias" data-en="Experiences" data-pt="Experiências" data-it="Esperienze">Experiencias</a></li>
+          <li><a href="#seccionuno"><img src="./imagenes/iconos/casa.png" alt="" class="iconocasablanca" data-es="Inicio" data-en="Home" data-pt="Início" data-it="Inizio"/></a></li>
+          <li><a href="./html/flota.html" data-es="Vehículos" data-en="Vehicles" data-pt="Veículos" data-it="Veicoli">Vehículos</a></li>
+          <li><a href="./html/contacto.html" data-es="Contáctanos" data-en="Contact Us" data-pt="Contate-nos" data-it="Contattaci">Contáctanos</a></li>
         </ul>
       </nav>
     </header>
@@ -30,9 +30,9 @@
             alt="BA Express Tours Logo"
             class="logo"
           />
-          <h1>BA EXPRESS TOURS</h1>
-          <h2>SU ANFITRIÓN EN BUENOS AIRES.</h2>
-          <p>Traslados-Turismo-Experiencias.</p>
+          <h1 data-es="BA EXPRESS TOURS" data-en="BA EXPRESS TOURS" data-pt="BA EXPRESS TOURS" data-it="BA EXPRESS TOURS">BA EXPRESS TOURS</h1>
+          <h2 data-es="SU ANFITRIÓN EN BUENOS AIRES." data-en="YOUR HOST IN BUENOS AIRES." data-pt="SEU ANFITRIÃO EM BUENOS AIRES." data-it="IL TUO OSPITE A BUENOS AIRES.">SU ANFITRIÓN EN BUENOS AIRES.</h2>
+          <p data-es="Traslados-Turismo-Experiencias." data-en="Transfers-Tourism-Experiences." data-pt="Transfers-Turismo-Experiências." data-it="Trasferimenti-Turismo-Esperienze.">Traslados-Turismo-Experiencias.</p>
           <div class="language-selector">
             <select id="language">
               <option value="es">Español</option>
@@ -46,48 +46,48 @@
     </main>
     <section class="form-section">
         <div class="container">
-        <h2>Precarga de datos para:</h2>
-        <h3>Traslados aeroportuarios. Arribos y partidas.</h3>
+        <h2 data-es="Precarga de datos para:" data-en="Pre-load data for:" data-pt="Pré-carregamento de dados para:" data-it="Pre-caricamento dei dati per:">Precarga de datos para:</h2>
+        <h3 data-es="Traslados aeroportuarios. Arribos y partidas." data-en="Airport transfers. Arrivals and departures." data-pt="Transfers aeroportuários. Chegadas e partidas." data-it="Trasferimenti aeroportuali. Arrivi e partenze.">Traslados aeroportuarios. Arribos y partidas.</h3>
         <form id="traslados-form" action="formulario.php" method="POST">
             <div class="form-group">
-                <h4>Datos del viaje</h4>
-                <label for="fecha">Fecha:</label>
+                <h4 data-es="Datos del viaje" data-en="Travel Information" data-pt="Dados da viagem" data-it="Dettagli del viaggio">Datos del viaje</h4>
+                <label for="fecha" data-es="Fecha:" data-en="Date:" data-pt="Data:" data-it="Data:">Fecha:</label>
                 <input type="date" id="fecha" name="fecha" required>
 
-                <label for="origen">Origen:</label>
+                <label for="origen" data-es="Origen:" data-en="Origin:" data-pt="Origem:" data-it="Origine:">Origen:</label>
                 <input type="text" id="origen" name="origen" required>
 
-                <label for="destino">Destino:</label>
+                <label for="destino" data-es="Destino:" data-en="Destination:" data-pt="Destino:" data-it="Destinazione:">Destino:</label>
                 <input type="text" id="destino" name="destino" required>
 
-                <label for="pasajeros">Pasajeros:</label>
+                <label for="pasajeros" data-es="Pasajeros:" data-en="Passengers:" data-pt="Passageiros:" data-it="Passeggeri:">Pasajeros:</label>
                 <input type="number" id="pasajeros" name="pasajeros" required>
 
-                <label for="equipaje">Equipaje:</label>
+                <label for="equipaje" data-es="Equipaje:" data-en="Luggage:" data-pt="Bagagem:" data-it="Bagagli:">Equipaje:</label>
                 <input type="number" id="equipaje" name="equipaje" required>
             </div>
 
             <div class="form-group">
-                <h4>Contacto</h4>
-                <label for="nombre">Nombre y apellido:</label>
+                <h4 data-es="Contacto" data-en="Contact" data-pt="Contato" data-it="Contatto">Contacto</h4>
+                <label for="nombre" data-es="Nombre y apellido:" data-en="Full Name:" data-pt="Nome e sobrenome:" data-it="Nome e cognome:">Nombre y apellido:</label>
                 <input type="text" id="nombre" name="nombre" required>
 
-                <label for="celular">Celular:</label>
+                <label for="celular" data-es="Celular:" data-en="Cell:" data-pt="Celular:" data-it="Cellulare:">Celular:</label>
                 <input type="tel" id="celular" name="celular" required>
 
-                <label for="email">E-Mail:</label>
+                <label for="email" data-es="E-Mail:" data-en="E-Mail:" data-pt="E-Mail:" data-it="E-Mail:">E-Mail:</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="idioma">Idioma:</label>
+                <label for="idioma" data-es="Idioma:" data-en="Language:" data-pt="Idioma:" data-it="Lingua:">Idioma:</label>
                 <select id="idioma" name="idioma" required>
-                    <option value="espanol">Español</option>
-                    <option value="ingles">Inglés</option>
-                    <option value="portugues">Portugués</option>
-                    <option value="italiano">Italiano</option>
+                    <option value="espanol" data-es="Español" data-en="Spanish" data-pt="Espanhol" data-it="Spagnolo">Español</option>
+                    <option value="ingles" data-es="Inglés" data-en="English" data-pt="Inglês" data-it="Inglese">Inglés</option>
+                    <option value="portugues" data-es="Portugués" data-en="Portuguese" data-pt="Português" data-it="Portoghese">Portugués</option>
+                    <option value="italiano" data-es="Italiano" data-en="Italian" data-pt="Italiano" data-it="Italiano">Italiano</option>
                 </select>
             </div>
 
-            <button type="submit">Enviar</button>
+            <button type="submit" data-es="Enviar" data-en="Submit" data-pt="Enviar" data-it="Invia">Enviar</button>
         </form>
     </div>
     </section>
@@ -95,45 +95,47 @@
         <div class="container">
         <div class="service-cards">
         <a href="./html/flota.html" class="service-card">
-            <img src="./imagenes/iconos/Transfers.svg" alt="">
-            <h3>Transfers</h3>
+            <img src="./imagenes/iconos/Transfers.svg" alt="" />
+            <h3 data-es="Transfers" data-en="Transfers" data-pt="Transfers" data-it="Trasferimenti">Transfers</h3>
           </a>
           <a href="./html/citytour.html" class="service-card">
-            <img src="./imagenes/iconos/City Tour.svg" alt="">
-            <h3>City Tour</h3>
+            <img src="./imagenes/iconos/City Tour.svg" alt="" />
+            <h3 data-es="City Tour" data-en="City Tour" data-pt="City Tour" data-it="City Tour">City Tour</h3>
             <!-- Añadir contenido relevante -->
           </a>
         <a href="./html/experiencias.html" class="service-card">
-            <img src="./imagenes/iconos/Experiencias.svg" alt="">
-            <h3>Experiencias</h3>
+            <img src="./imagenes/iconos/Experiencias.svg" alt="" />
+            <h3 data-es="Experiencias" data-en="Experiences" data-pt="Experiências" data-it="Esperienze">Experiencias</h3>
             <!-- Añadir contenido relevante -->
           </a>
         </div>
         <div class="sobrenosotros">
-        <h2>Traslados - Turismo - Experiencias</h2>
-        <p><b>Somos una empresa familiar dirigida por profesionales Licenciados en Turismo, con gran experiencia e idoneidad en el rubro.</b></p>
-        <p>Cada servicio es brindado con dedicación y calidad desde el primer contacto con nuestros clientes.</p>
-        <p>Nos capacitamos para poder satisfacer las necesidades que cada uno requiera dando un servicio premium y personalizado.</p>
-        <h2>¿Por qué elegirnos?</h2>
+        <h2 data-es="Traslados - Turismo - Experiencias" data-en="Transfers - Tourism - Experiences" data-pt="Transfers - Turismo - Experiências" data-it="Trasferimenti - Turismo - Esperienze">Traslados - Turismo - Experiencias</h2>
+        <p><b data-es="Somos una empresa familiar dirigida por profesionales Licenciados en Turismo, con gran experiencia e idoneidad en el rubro." data-en="We are a family-owned company run by professionals with a degree in Tourism, with extensive experience and expertise in the field." data-pt="Somos uma empresa familiar dirigida por profissionais com licenciatura em Turismo, com grande experiência e competência no setor." data-it="Siamo un'azienda familiare gestita da professionisti laureati in Turismo, con grande esperienza e competenza nel settore.">Somos una empresa familiar dirigida por profesionales Licenciados en Turismo, con gran experiencia e idoneidad en el rubro.</b></p>
+        <p data-es="Cada servicio es brindado con dedicación y calidad desde el primer contacto con nuestros clientes." data-en="Each service is provided with dedication and quality from the first contact with our clients." data-pt="Cada serviço é prestado com dedicação e qualidade desde o primeiro contato com nossos clientes." data-it="Ogni servizio è offerto con dedizione e qualità sin dal primo contatto con i nostri clienti.">Cada servicio es brindado con dedicación y calidad desde el primer contacto con nuestros clientes.</p>
+        <p data-es="Nos capacitamos para poder satisfacer las necesidades que cada uno requiera dando un servicio premium y personalizado." data-en="We train ourselves to meet each individual's needs, providing a premium and personalized service." data-pt="Nos capacitamos para atender às necessidades de cada um, oferecendo um serviço premium e personalizado." data-it="Ci formiamo per soddisfare le esigenze di ciascuno, offrendo un servizio premium e personalizzato.">Nos capacitamos para poder satisfacer las necesidades que cada uno requiera dando un servicio premium y personalizado.</p>
+        <h2 data-es="¿Por qué elegirnos?" data-en="Why choose us?" data-pt="Por que nos escolher?" data-it="Perché sceglierci?">¿Por qué elegirnos?</h2>
         </div>
         <div class="reasons">
             <div class="reason">
-                <h3>Seguridad y Confort:</h3>
-                <p>Ofrecemos un servicio de transporte que prioriza la seguridad y el confort de nuestros clientes en todo momento. Nuestros vehículos están equipados con las últimas medidas de seguridad y son mantenidos regularmente para garantizar viajes sin contratiempos.</p>
+                <h3 data-es="Seguridad y Confort:" data-en="Safety and Comfort:" data-pt="Segurança e Conforto:" data-it="Sicurezza e Comfort:">Seguridad y Confort:</h3>
+                <p data-es="Ofrecemos un servicio de transporte que prioriza la seguridad y el confort de nuestros clientes en todo momento. Nuestros vehículos están equipados con las últimas medidas de seguridad y son mantenidos regularmente para garantizar viajes sin contratiempos." data-en="We offer a transportation service that prioritizes the safety and comfort of our clients at all times. Our vehicles are equipped with the latest safety measures and are regularly maintained to ensure smooth trips." data-pt="Oferecemos um serviço de transporte que prioriza a segurança e o conforto de nossos clientes o tempo todo. Nossos veículos estão equipados com as últimas medidas de segurança e são mantidos regularmente para garantir viagens sem contratempos." data-it="Offriamo un servizio di trasporto che dà priorità alla sicurezza e al comfort dei nostri clienti in ogni momento. I nostri veicoli sono equipaggiati con le ultime misure di sicurezza e sono regolarmente mantenuti per garantire viaggi senza intoppi.">Ofrecemos un servicio de transporte que prioriza la seguridad y el confort de nuestros clientes en todo momento. Nuestros vehículos están equipados con las últimas medidas de seguridad y son mantenidos regularmente para garantizar viajes sin contratiempos.</p>
             </div>
             <div class="reason">
-                <h3>Monitoreo de Vuelos:</h3>
-                <p>En BA EXPRESS nos comprometemos a rastrear cada vuelo de nuestros clientes en tiempo real. Esto significa que estamos siempre informados sobre cualquier cambio en horarios o retrasos, asegurando que estaremos esperándolos en su regreso.</p>
+                <h3 data-es="Monitoreo de Vuelos:" data-en="Flight Monitoring:" data-pt="Monitoramento de Voos:" data-it="Monitoraggio dei Voli:">Monitoreo de Vuelos:</h3>
+                <p data-es="En BA EXPRESS nos comprometemos a rastrear cada vuelo de nuestros clientes en tiempo real. Esto significa que estamos siempre informados sobre cualquier cambio en horarios o retrasos, asegurando que estaremos esperándolos en su regreso." data-en="At BA EXPRESS, we are committed to tracking each client's flight in real-time. This means we are always informed about any schedule changes or delays, ensuring that we will be waiting for them upon their return." data-pt="Na BA EXPRESS, estamos comprometidos em rastrear cada voo de nossos clientes em tempo real. Isso significa que estamos sempre informados sobre quaisquer mudanças de horário ou atrasos, garantindo que estaremos esperando por eles no retorno." data-it="In BA EXPRESS, ci impegniamo a monitorare ogni volo dei nostri clienti in tempo reale. Questo significa che siamo sempre informati su eventuali cambiamenti di orario o ritardi, assicurandoci che saremo ad aspettarli al loro ritorno.">En BA EXPRESS nos comprometemos a rastrear cada vuelo de nuestros clientes en tiempo real. Esto significa que estamos siempre informados sobre cualquier cambio en horarios o retrasos, asegurando que estaremos esperándolos en su regreso.</p>
             </div>
             <div class="reason">
-                <h3>Choferes y Guías Profesionales:</h3>
-                <p>Nuestro equipo está compuesto por profesionales altamente capacitados, que no solo cuentan con experiencia en conducción segura, sino que también dominan varios idiomas como inglés, español, portugués e italiano. Esto nos permite comunicarnos de manera eficiente y cordial, adaptándonos a sus necesidades lingüísticas y culturales.</p>
+                <h3 data-es="Choferes y Guías Profesionales:" data-en="Professional Drivers and Guides:" data-pt="Motoristas e Guias Profissionais:" data-it="Autisti e Guide Professionali:">Choferes y Guías Profesionales:</h3>
+                <p data-es="Nuestro equipo está compuesto por profesionales altamente capacitados, que no solo cuentan con experiencia en conducción segura, sino que también dominan varios idiomas como inglés, español, portugués e italiano. Esto nos permite comunicarnos de manera eficiente y cordial, adaptándonos a sus necesidades lingüísticas y culturales." data-en="Our team is made up of highly trained professionals who not only have experience in safe driving but also speak several languages such as English, Spanish, Portuguese, and Italian. This allows us to communicate efficiently and cordially, adapting to their linguistic and cultural needs." data-pt="Nossa equipe é composta por profissionais altamente qualificados, que não só têm experiência em condução segura, mas também falam vários idiomas como inglês, espanhol, português e italiano. Isso nos permite comunicar de forma eficiente e cordial, adaptando-nos às suas necessidades linguísticas e culturais." data-it="Il nostro team è composto da professionisti altamente qualificati, che non solo hanno esperienza nella guida sicura, ma parlano anche diverse lingue come inglese, spagnolo, portoghese e italiano. Questo ci consente di comunicare in modo efficiente e cordiale, adattandoci alle loro esigenze linguistiche e culturali.">Nuestro equipo está compuesto por profesionales altamente capacitados, que no solo cuentan con experiencia en conducción segura, sino que también dominan varios idiomas como inglés, español, portugués e italiano. Esto nos permite comunicarnos de manera eficiente y cordial, adaptándonos a sus necesidades lingüísticas y culturales.</p>
             </div>
         </div>
-        <h3 class="consultas">Consultas</h3>
+        <h3 class="consultas" data-es="Consultas" data-en="Inquiries" data-pt="Consultas" data-it="Richieste">Consultas</h3>
         <div class="contact-info">
-            <p ><i class="fas fa-envelope"></i> <a href="mailto:baexpresstours@gmail.com" style="text-decoration: none; color: white;">baexpresstours@gmail.com</a></p>
-            <p><i class="fas fa-phone"></i> 1144058237 / 1136709734</p>
+          <p>
+            <i class="fas fa-envelope"></i> <a href="mailto:baexpresstours@gmail.com" style="text-decoration: none; color: white;">baexpresstours@gmail.com</a>
+          </p>          
+            <p <i class="fas fa-phone"></i> 1144058237 / 1136709734</p>
             <div class="social-icons">
                 <a href="https://www.instagram.com/baexpresstours/" class="social-icon"><i class="fab fa-instagram"></i></a>
                 <a href="https://wa.me/1136709734" class="social-icon"><i class="fab fa-whatsapp"></i></a>
@@ -142,7 +144,6 @@
         </div>
     </section>
     </main>
-
 
     <script src="./javascript/script.js"></script>
   </body>
