@@ -1,19 +1,16 @@
 document.getElementById("language").addEventListener("change", function () {
-  var selectedLanguage = this.value;
-  switch (selectedLanguage) {
-    case "es":
-      window.location.href = "/html/contacto.html"; // Página en español
-      break;
-    case "en":
-      window.location.href = "/html/contacto.html"; // Página en inglés
-      break;
-    case "pt":
-      window.location.href = "/html/contacto.html"; // Página en portugués
-      break;
-    case "it":
-      window.location.href = "/html/contacto.html"; // Página en italiano
-      break;
-    default:
-      window.location.href = "/html/contacto.html"; // Página por defecto en español
-  }
+  const selectedLanguage = this.value;
+  changeLanguage(selectedLanguage);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const defaultLanguage = "es";
+  document.getElementById("language").value = defaultLanguage;
+  changeLanguage(defaultLanguage);
+});
+
+function changeLanguage(language) {
+  document.querySelectorAll("[data-es]").forEach((element) => {
+    element.textContent = element.getAttribute(`data-${language}`);
+  });
+}
