@@ -175,6 +175,7 @@ button[type="submit"]:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   margin-bottom: 20px;
+  text-decoration: none;
 }
 
 .service-card:hover {
@@ -309,12 +310,23 @@ h3.consultas {
   color: #fff;
 }
 
+/* Contenedor de imagen */
+.divh1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+/* Imagen */
 .camionetah1 {
   width: 100%;
   height: auto;
-  display: block;
-  max-width: 100%;
+  max-width: 1250px; /* Ajusta este valor según sea necesario */
   object-fit: cover;
+  display: block;
 }
 
 #intro,
@@ -453,7 +465,7 @@ h3.consultas {
 }
 
 .nota-equipaje {
-  color: grey;
+  color: rgb(0, 0, 0);
   margin-top: 30px;
   font-style: italic;
   text-align: center;
