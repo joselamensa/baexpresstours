@@ -46,7 +46,10 @@ header nav ul li {
   display: inline;
   margin: 0 10px;
 }
-
+header nav ul li a:hover {
+  color: #1a1a2e; /* Color de texto azul/negro */
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
 header a {
   color: #fff;
   text-decoration: none;
@@ -54,7 +57,40 @@ header a {
   font-size: 16px;
 }
 
+
 /* Logo section */
+.language-selector {
+  position: absolute; /* Posiciona el elemento de forma absoluta dentro de .logo-section */
+  top: 0;             /* Alinea el elemento al borde superior de .logo-section */
+  left: 0;            /* Alinea el elemento al borde izquierdo de .logo-section */
+  padding: 10px;      /* Añade un poco de espacio alrededor del contenido */
+  z-index: 1000;      /* Asegura que el elemento esté por encima de otros elementos en la misma sección */
+}
+@media (max-width: 600px) {
+  .language-selector {
+    top: 5px;          /* Ajusta el espacio superior */
+    left: 5px;         /* Ajusta el espacio izquierdo */
+    padding: 5px;      /* Reduce el padding para pantallas pequeñas */
+  }
+}
+
+/* Media query para pantallas medianas (por ejemplo, tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .language-selector {
+    top: 10px;         /* Ajusta el espacio superior */
+    left: 10px;        /* Ajusta el espacio izquierdo */
+    padding: 8px;      /* Ajusta el padding para pantallas medianas */
+  }
+}
+
+/* Media query para pantallas grandes (por ejemplo, escritorios) */
+@media (min-width: 1025px) {
+  .language-selector {
+    top: 20px;         /* Ajusta el espacio superior */
+    left: 20px;        /* Ajusta el espacio izquierdo */
+    padding: 15px;     /* Ajusta el padding para pantallas grandes */
+  }
+}
 .logo-section {
   background-image: linear-gradient(
       rgba(0, 51, 102, 0.7),
@@ -63,6 +99,7 @@ header a {
     url("../imagenes/imgs/IMG_8903.JPG");
   background-size: cover;
   background-position: center;
+  position: relative;
   color: #ffffff;
   text-align: center;
   padding: 50px 0;
@@ -238,8 +275,8 @@ button[type="submit"]:hover {
   top: 60%;
   right: 15px;
   transform: translateY(-50%);
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -309,7 +346,9 @@ h3.consultas {
   background-position: center;
   color: #fff;
 }
-
+.headercity {
+  font-size: 30px;
+}
 /* Contenedor de imagen */
 .divh1 {
   display: flex;
@@ -386,7 +425,7 @@ h3.consultas {
 /* FLOTA VEHICULOS */
 .flota {
   font-family: "Arial", sans-serif;
-  background-image: url("../imagenes/imgs/Fondo\ 1.png");
+  background-image: url("../imagenes/imgs/Fondo\ 2.png");
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -465,7 +504,7 @@ h3.consultas {
 }
 
 .nota-equipaje {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-top: 30px;
   font-style: italic;
   text-align: center;
