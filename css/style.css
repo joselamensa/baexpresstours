@@ -431,14 +431,39 @@ h3.consultas {
 
 .slide{
   width:100%;
-  
   display:none;
+  position: relative; /* Asegura que el contenedor del slide se maneje correctamente */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
   animation-name:fade;
   animation-duration:1s;
-  
 }
-img{
- width:100%; 
+.slideimgtango {
+  width: 100%;
+  height: 300px; /* Puedes ajustar esta altura según lo necesites */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+  object-position: 20% 65%; /* Ajusta la posición horizontal y vertical según tus necesidades */
+  display: block; /* Elimina el espacio en la parte inferior de la imagen */
+}
+.slideimgpolo {
+  width: 100%;
+  height: 300px; /* Puedes ajustar esta altura según lo necesites */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+  object-position: 20% 40%; /* Ajusta la posición horizontal y vertical según tus necesidades */
+  display: block; /* Elimina el espacio en la parte inferior de la imagen */
+}
+.slideimgasado {
+  width: 100%;
+  height: 300px; /* Puedes ajustar esta altura según lo necesites */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+  object-position: 20% 40%; /* Ajusta la posición horizontal y vertical según tus necesidades */
+  display: block; /* Elimina el espacio en la parte inferior de la imagen */
+}
+.slideimgdelta {
+  width: 100%;
+  height: 300px; /* Puedes ajustar esta altura según lo necesites */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+  object-position: 20% 40%; /* Ajusta la posición horizontal y vertical según tus necesidades */
+  display: block; /* Elimina el espacio en la parte inferior de la imagen */
 }
 @keyframes fade{
   from{opacity:0.5;}
@@ -485,7 +510,7 @@ img{
 }
 
 .active{
-  background:crimson;
+  background:rgb(36, 0, 126);
 }
 
 @media (max-width:576px){
