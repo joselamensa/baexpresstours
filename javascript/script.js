@@ -82,3 +82,24 @@ function changeSlide(){
 }
 
 
+
+
+document.getElementById('traslados-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  fetch('./php/formulario.php', {
+      method: 'POST',
+      body: new FormData(this)
+  })
+  .then(response => response.json())
+  .then(data => {
+      document.getElementById('form-message').innerHTML = data.message;
+      if (data.success) {
+          document.getElementById('traslados-form').reset();
+      }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+      document.getElementById('form-message').innerHTML = 'Ocurrió un error al enviar el formulario. Por favor, inténtelo de nuevo.';
+  });
+});

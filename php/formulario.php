@@ -1,4 +1,6 @@
 <?php
+header('Content-Type: application/json');
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "baexpresstours@gmail.com";
     $subject = "Nuevo formulario de traslado aeroportuario";
@@ -35,13 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Enviar el correo
     if (mail($to, $subject, $message, $headers)) {
-        echo "<p>Gracias por su solicitud. Nos pondremos en contacto con usted pronto.</p>";
+        echo json_encode(['success' => true, 'message' => 'Gracias por su solicitud. Nos pondremos en contacto con usted pronto.']);
     } else {
-        echo "<p>Lo sentimos, hubo un problema al enviar su solicitud. Por favor, inténtelo de nuevo más tarde.</p>";
+        echo json_encode(['success' => false, 'message' => 'Lo sentimos, hubo un problema al enviar su solicitud. Por favor, inténtelo de nuevo más tarde.']);
     }
 } else {
-    // Si alguien intenta acceder directamente a este archivo, redirigir a la página principal
-    header("Location: index.html");
-    exit();
+    echo json_encode(['success' => false, 'message' => 'Método de solicitud no válido.']);
 }
 ?>
