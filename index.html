@@ -48,17 +48,23 @@
         <div class="container">
         <h2 data-es="Precarga de datos para:" data-en="Pre-load data for:" data-pt="Pré-carregamento de dados para:" data-it="Pre-caricamento dei dati per:">Precarga de datos para:</h2>
         <h3 data-es="Traslados aeroportuarios. Arribos y partidas." data-en="Airport transfers. Arrivals and departures." data-pt="Transfers aeroportuários. Chegadas e partidas." data-it="Trasferimenti aeroportuali. Arrivi e partenze.">Traslados aeroportuarios. Arribos y partidas.</h3>
-        <form id="traslados-form" action="./php/formulario.php" method="POST">
+        <form id="traslados-form" action="./contacto.php" method="POST">
             <div class="form-group">
                 <h4 data-es="Datos del viaje" data-en="Travel Information" data-pt="Dados da viagem" data-it="Dettagli del viaggio">Datos del viaje</h4>
                 <label for="fecha" data-es="Fecha:" data-en="Date:" data-pt="Data:" data-it="Data:">Fecha:</label>
                 <input type="date" id="fecha" name="fecha" required>
+
+                <label for="hora" data-es="Hora:" data-en="Time:" data-pt="Hora:" data-it="Ora:">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
 
                 <label for="origen" data-es="Origen:" data-en="Origin:" data-pt="Origem:" data-it="Origine:">Origen:</label>
                 <input type="text" id="origen" name="origen" required>
 
                 <label for="destino" data-es="Destino:" data-en="Destination:" data-pt="Destino:" data-it="Destinazione:">Destino:</label>
                 <input type="text" id="destino" name="destino" required>
+
+                <label for="numero_vuelo" data-es="Número de vuelo (opcional):" data-en="Flight number (optional):" data-pt="Número do voo (opcional):" data-it="Numero del volo (opzionale):">Número de vuelo (opcional):</label>
+                <input type="text" id="numero_vuelo" name="numero_vuelo">
 
                 <label for="pasajeros" data-es="Pasajeros:" data-en="Passengers:" data-pt="Passageiros:" data-it="Passeggeri:">Pasajeros:</label>
                 <input type="number" id="pasajeros" name="pasajeros" required>
@@ -89,7 +95,7 @@
 
             <button type="submit" data-es="Enviar" data-en="Submit" data-pt="Enviar" data-it="Invia">Enviar</button>
         </form>
-    </div>
+      </div>
     </section>
     <section class="about-section">
         <div class="container">

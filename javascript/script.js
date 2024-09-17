@@ -36,70 +36,84 @@ function changeLanguage(language) {
   window.location.href = url.href;
 }
 
-// IMAGENES EXPERIENCIAS
-
-var slides = document.querySelectorAll(".slide");
-var dots = document.querySelectorAll(".dot");
-var index = 0;
 
 
-function prevSlide(n){
-  index+=n;
-  console.log("prevSlide is called");
-  changeSlide();
+function initializeForm() {
+  const form = document.getElementById('traslados-form');
+  const formMessage = document.createElement('div');
+  formMessage.id = 'form-message';
+  form.appendChild(formMessage);
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Mostrar un indicador de carga inmediatamente en el idioma seleccionado
+      const language = document.getElementById('language').value;
+      const loadingMessages = {
+        'es': 'Enviando...',
+        'en': 'Sending...',
+        'pt': 'Enviando...',
+        'it': 'Inviando...'
+      };
+      formMessage.textContent = loadingMessages[language] || loadingMessages['es'];
+      formMessage.className = 'loading';
+      formMessage.style.color = 'blue'; // Cambiar el color del texto a azul
+
+      const formData = new FormData(this);
+
+      fetch('./contacto.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then(text => {
+        let data;
+        try {
+          data = JSON.parse(text);
+        } catch (e) {
+          console.error('Error al parsear JSON:', text);
+          throw new Error('La respuesta del servidor no es JSON válido');
+        }
+        
+        if (data.success) {
+          // Ocultar el formulario
+          form.style.display = 'none';
+          
+          // Mostrar mensaje de agradecimiento
+          const thankYouMessage = document.createElement('div');
+          thankYouMessage.className = 'thank-you-message';
+          thankYouMessage.textContent = getThankYouMessage();
+          form.parentNode.insertBefore(thankYouMessage, form);
+        } else {
+          formMessage.textContent = data.message;
+          formMessage.className = 'error';
+        }
+      })
+      .catch(error => {
+        console.error('Hubo un problema con la operación fetch:', error);
+        formMessage.textContent = 'Ocurrió un error al enviar el formulario: ' + error.message;
+        formMessage.className = 'error';
+      });
+    });
+  }
 }
 
-function nextSlide(n){
-  index+=n;
-  changeSlide();
+function getThankYouMessage() {
+  const language = document.getElementById('language').value;
+  const messages = {
+    'es': 'Gracias por su contacto, nos pondremos en contacto breve.',
+    'en': 'Thank you for your contact, we will get in touch shortly.',
+    'pt': 'Obrigado pelo seu contato, entraremos em contato em breve.',
+    'it': 'Grazie per il vostro contatto, vi contatteremo a breve.'
+  };
+  return messages[language] || messages['es'];
 }
 
-changeSlide();
-
-function changeSlide(){
-    
-  if(index>slides.length-1)
-    index=0;
-  
-  if(index<0)
-    index=slides.length-1;
-  
-  
-  
-    for(let i=0;i<slides.length;i++){
-      slides[i].style.display = "none";
-      
-      dots[i].classList.remove("active");
-      
-      
-    }
-    
-    slides[index].style.display = "block";
-    dots[index].classList.add("active");
-
-  
-
-}
-
-
-
-
-document.getElementById('traslados-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  fetch('./php/formulario.php', {
-      method: 'POST',
-      body: new FormData(this)
-  })
-  .then(response => response.json())
-  .then(data => {
-      document.getElementById('form-message').innerHTML = data.message;
-      if (data.success) {
-          document.getElementById('traslados-form').reset();
-      }
-  })
-  .catch(error => {
-      console.error('Error:', error);
-      document.getElementById('form-message').innerHTML = 'Ocurrió un error al enviar el formulario. Por favor, inténtelo de nuevo.';
-  });
-});
+// Asegúrate de llamar a la función cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', initializeForm);

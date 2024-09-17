@@ -679,3 +679,21 @@ h3.consultas {
     font-size: 14px;
   }
 }
+.thank-you-message {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.error {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
